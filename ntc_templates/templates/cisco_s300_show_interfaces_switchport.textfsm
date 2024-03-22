@@ -14,6 +14,7 @@ Value List MAC_BASED_VLAN_GROUP_ID (\d+)
 Value List MAC_BASED_VLAN_ID (\d+)
 
 Start
+  ^\s*Added\s+by:\s+D-Default,\s+S-Static,\s+G-GVRP,\s+R-Radius\s+Assigned\s+VLAN,\s+T-Guest\s+VLAN,\s+V-Voice VLAN\s*$$
   ^\s*Port\s*:\s*${INTERFACE}\s*$$
   ^\s*Port\s+Mode\s*:\s*${INTERFACE_MODE}\s*$$
   ^\s*Gvrp\s+Status\s*:\s*${GVRP_STATUS}\s*$$
@@ -25,6 +26,7 @@ Start
   ^. -> Error
 
 PartOfVlan
+  ^\s*Vlan\s+Name\s+Egress\s+rule\s+Added\s+by\s*$$
   ^\s*Vlan\s+Name\s+Egress\s+rule\s+Port\s+Membership\s+Type\s*$$
   ^(\s*-*)*\s*$$
   ^\s*${VLAN}\s+${NAME}\s+${EGRESS_RULE}\s+${INTERFACE_MEMBERSHIP_TYPE}\s*$$
